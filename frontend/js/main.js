@@ -532,8 +532,7 @@ chatbotTraining?.addEventListener("submit", (event) => {
 });
 
 // ---- Contact form -> backend API ----
-// Change this if the backend runs somewhere other than localhost:3001
-const API_BASE = window.API_BASE_URL || "http://localhost:3001";
+const API_BASE = window.API_BASE_URL || "https://getozea.onrender.com";
 
 const form = document.getElementById("contact-form");
 const statusEl = document.getElementById("form-status");
