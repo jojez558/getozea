@@ -1,4 +1,4 @@
-# Getozea.org — Full Project
+# Getozvea.org — Full Project
 
 A personal portfolio site with a separated frontend and backend.
 
@@ -68,4 +68,4 @@ script loads.
 - Add email notifications on new contact submissions (e.g. via Nodemailer).
 - Deploy the frontend (Netlify, Vercel, GitHub Pages) and backend (Render,
   Railway, Fly.io) separately, as their names suggest.
-# getozea
+# getozvea

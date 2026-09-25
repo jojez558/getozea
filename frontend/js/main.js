@@ -29,7 +29,7 @@ const chatbotTrainToggle = document.querySelector(".chatbot-train-toggle");
 const chatbotTraining = document.querySelector("#chatbot-training");
 const trainingStatus = document.querySelector(".chatbot-training-status");
 
-const TRAINING_KEY = "getozea-chatbot-knowledge";
+const TRAINING_KEY = "getozvea-chatbot-knowledge";
 
 function readTraining() {
   try {
@@ -85,7 +85,7 @@ landingActions.forEach((action) => {
 const legalPages = {
   terms: {
     title: "Terms & conditions",
-    content: "<h3>Using this website</h3><p>This website presents Getozea, George Mwaura's web design, development, digital marketing, branding, copywriting, and video editing work. By using the site, you agree to use its information respectfully and lawfully.</p><h3>Project enquiries</h3><p>Information submitted through a contact form is used to understand your enquiry and respond to it. A submitted enquiry does not create a contract until the scope, price, timeline, and responsibilities have been agreed directly.</p><h3>Content and availability</h3><p>Website content is provided for general information and may change as the portfolio and services develop. Specific project terms are confirmed separately with each client.</p>"
+    content: "<h3>Using this website</h3><p>This website presents Getozvea, George Mwaura's web design, development, digital marketing, branding, copywriting, and video editing work. By using the site, you agree to use its information respectfully and lawfully.</p><h3>Project enquiries</h3><p>Information submitted through a contact form is used to understand your enquiry and respond to it. A submitted enquiry does not create a contract until the scope, price, timeline, and responsibilities have been agreed directly.</p><h3>Content and availability</h3><p>Website content is provided for general information and may change as the portfolio and services develop. Specific project terms are confirmed separately with each client.</p>"
   },
   privacy: {
     title: "Privacy policy",
@@ -93,7 +93,7 @@ const legalPages = {
   },
   license: {
     title: "License",
-    content: "<h3>Portfolio work</h3><p>The written portfolio content, Getozea branding, photographs, visual design, and custom website presentation belong to George Mwaura or their respective owners unless stated otherwise.</p><h3>Permitted use</h3><p>You may view this website and share links to it. You may not copy, repackage, resell, or present the site's design, writing, branding, or code as your own without written permission.</p><h3>Third-party materials</h3><p>External fonts, platform names, and third-party marks remain the property of their respective owners and are referenced for identification or service communication.</p>"
+    content: "<h3>Portfolio work</h3><p>The written portfolio content, Getozvea branding, photographs, visual design, and custom website presentation belong to George Mwaura or their respective owners unless stated otherwise.</p><h3>Permitted use</h3><p>You may view this website and share links to it. You may not copy, repackage, resell, or present the site's design, writing, branding, or code as your own without written permission.</p><h3>Third-party materials</h3><p>External fonts, platform names, and third-party marks remain the property of their respective owners and are referenced for identification or service communication.</p>"
   }
 };
 
@@ -364,7 +364,7 @@ menuToggle?.addEventListener("click", () => {
 const chatbotReplies = [
   {
     terms: ["web design", "website design", "website development", "build a website", "website"],
-    reply: "Getozea creates responsive websites for businesses, personal brands, and growing ideas. The work can include structure, visual design, frontend development, backend features, contact forms, SEO foundations, testing, and launch support."
+    reply: "Getozvea creates responsive websites for businesses, personal brands, and growing ideas. The work can include structure, visual design, frontend development, backend features, contact forms, SEO foundations, testing, and launch support."
   },
   {
     terms: ["seo", "search engine", "google ranking", "be found", "search visibility"],
@@ -404,19 +404,19 @@ const chatbotReplies = [
   },
   {
     terms: ["cms", "content management", "admin panel", "update website", "edit website"],
-    reply: "The Getozea project includes a purpose-built CMS concept with authenticated administration, editable text, services, portfolio entries, image uploads, contact details, and stored enquiries without editing code."
+    reply: "The Getozvea project includes a purpose-built CMS concept with authenticated administration, editable text, services, portfolio entries, image uploads, contact details, and stored enquiries without editing code."
   },
   {
-    terms: ["getozea project", "technical report", "project report", "case study"],
-    reply: "The Portfolio Report explains the Getozea project from background and requirements through architecture, UX, implementation, testing, deployment, risks, limitations, references, and future recommendations."
+    terms: ["getozvea project", "technical report", "project report", "case study"],
+    reply: "The Portfolio Report explains the Getozvea project from background and requirements through architecture, UX, implementation, testing, deployment, risks, limitations, references, and future recommendations."
   },
   {
     terms: ["node", "express", "javascript", "technology", "tech stack"],
-    reply: "The featured Getozea system uses HTML, CSS, JavaScript, Node.js, and Express. It uses a lightweight backend, structured content storage, authenticated administration, image handling, and contact form storage."
+    reply: "The featured Getozvea system uses HTML, CSS, JavaScript, Node.js, and Express. It uses a lightweight backend, structured content storage, authenticated administration, image handling, and contact form storage."
   },
   {
     terms: ["where are you", "location", "based", "office", "karatina", "kitale"],
-    reply: "Getozea is based in Karatina, Kenya, with George connected to both Karatina and Kitale. Projects can be discussed remotely as well as locally."
+    reply: "Getozvea is based in Karatina, Kenya, with George connected to both Karatina and Kitale. Projects can be discussed remotely as well as locally."
   },
   {
     terms: ["email address", "email you", "send email"],
@@ -436,7 +436,7 @@ const chatbotReplies = [
   },
   {
     terms: ["service", "offer", "do you do", "help"],
-    reply: "Getozea offers web design and development, digital marketing, SEO, social media marketing, Google Ads, branding, and copywriting. Choose Services in the navigation or open a service card for the full breakdown."
+    reply: "Getozvea offers web design and development, digital marketing, SEO, social media marketing, Google Ads, branding, and copywriting. Choose Services in the navigation or open a service card for the full breakdown."
   },
   {
     terms: ["process", "work", "approach", "start"],
@@ -448,7 +448,7 @@ const chatbotReplies = [
   },
   {
     terms: ["portfolio", "work", "project", "example"],
-    reply: "You can explore the current work and the full Getozea technical portfolio report from Our Works and Portfolio Report. The report explains the architecture, design decisions, testing, and lessons behind the project."
+    reply: "You can explore the current work and the full Getozvea technical portfolio report from Our Works and Portfolio Report. The report explains the architecture, design decisions, testing, and lessons behind the project."
   },
   {
     terms: ["contact", "email", "message", "reach", "phone", "whatsapp"],
