@@ -1,4 +1,4 @@
-# George's Portfolio — Full Project
+# Getozea.org — Full Project
 
 A personal portfolio site with a separated frontend and backend.
 
