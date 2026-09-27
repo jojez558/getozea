@@ -141,14 +141,14 @@ button {
   height: 1px;
   background: currentColor;
 }
-.landing-content h1 {
+.landing-content h2 {
   color: #f7f5ec;
   font-size: clamp(4rem, 10vw, 8.4rem);
   line-height: 0.86;
   letter-spacing: -0.025em;
   margin: 0;
 }
-.landing-content h1 em {
+.landing-content h2 em {
   color: #d3a66e;
   font-style: italic;
 }
@@ -324,7 +324,7 @@ button {
     font-size: 0.64rem;
     letter-spacing: 0.12em;
   }
-  .landing-content h1 {
+  .landing-content h2 {
     max-width: 100%;
     font-size: clamp(3.15rem, 15vw, 5.2rem);
     line-height: 0.94;
@@ -543,7 +543,7 @@ main {
   background: var(--accent);
 }
 
-h1.page-title {
+.page-title {
   font-size: clamp(2rem, 4vw, 2.9rem);
   line-height: 1.12;
   max-width: 15ch;
@@ -1235,6 +1235,7 @@ main {
   color: #f8f8f6;
 }
 .agency-hero h1,
+.agency-hero h2,
 .agency-page-title {
   max-width: 900px;
   margin: 22px 0 26px;
@@ -1245,6 +1246,7 @@ main {
   line-height: 0.98;
 }
 .agency-hero h1 em,
+.agency-hero h2 em,
 .agency-page-title em {
   color: #d89a58;
   font-style: normal;
@@ -2406,6 +2408,7 @@ main {
 }
 @media (max-width: 560px) {
   .agency-hero h1,
+  .agency-hero h2,
   .agency-page-title {
     font-size: clamp(3.2rem, 15vw, 5rem);
   }
@@ -2546,7 +2549,7 @@ main {
 #panel-overview .kicker .dot {
   background: #fff;
 }
-#panel-overview h1.page-title {
+#panel-overview .page-title {
   color: #fff;
   font-family: "Newsreader", serif;
   font-size: clamp(4rem, 7.4vw, 7.6rem);
@@ -2556,7 +2559,7 @@ main {
   max-width: 8ch;
   margin-bottom: 38px;
 }
-#panel-overview h1.page-title em {
+#panel-overview .page-title em {
   font-weight: 400;
 }
 #panel-overview p.lede {
@@ -2902,7 +2905,7 @@ main textarea::placeholder {
     height: 62svh;
     min-height: 400px;
   }
-  #panel-overview h1.page-title {
+  #panel-overview .page-title {
     font-size: clamp(3.2rem, 14vw, 5rem);
     max-width: 9ch;
     margin-bottom: 24px;
@@ -3547,7 +3550,7 @@ body:not(:has(#panel-overview.active)) .agency-panel h3 {
   color: #b8dbc8;
   font-size: 0.78rem;
 }
-.landing-content h1 em {
+.landing-content h2 em {
   font-style: normal;
 }
 .agency-footer-columns {
@@ -3634,7 +3637,8 @@ body:not(:has(#panel-overview.active)) .agency-panel h3 {
     padding: 52px 0 58px;
     gap: 42px;
   }
-  .agency-hero h1 {
+  .agency-hero h1,
+  .agency-hero h2 {
     font-size: clamp(3.6rem, 14vw, 5.6rem);
   }
   .agency-hero p {
@@ -3752,7 +3756,8 @@ body:not(:has(#panel-overview.active)) .agency-panel h3 {
   .sf-icon:focus-within::after {
     opacity: 1;
   }
-  .agency-hero h1 {
+  .agency-hero h1,
+  .agency-hero h2 {
     font-size: clamp(2.8rem, 12vw, 4.7rem);
     letter-spacing: -0.06em;
   }
