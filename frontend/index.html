@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Getozvea | Web Design and Digital Studio in Kenya</title>
-    <meta name="description" content="Getozvea is a Kenyan web design and website development studio by George Mwaura, creating responsive websites, e-commerce platforms, digital marketing, SEO, branding, copywriting, and video content for businesses in Kenya." />
+    <meta name="description" content="Getozvea is a web design and digital marketing studio in Karatina, Kenya, creating responsive websites, online stores, and digital experiences." />
     <meta name="keywords" content="web design Kenya, website development Kenya, website builder Kenya, web development company Kenya, digital marketing Kenya, SEO Kenya, branding Kenya, Getozvea, George Mwaura" />
     <link rel="canonical" href="https://getozvea.org/" />
     <link rel="icon" type="image/svg+xml" href="images/getozvea-logo.svg" />
@@ -28,10 +28,19 @@
             "name": "Getozvea",
             "url": "https://getozvea.org/",
             "logo": "https://getozvea.org/images/getozvea-logo.svg",
-            "founder": { "@type": "Person", "name": "George Mwaura Mungai" },
+            "founder": { "@id": "https://getozvea.org/#george-mwaura" },
             "email": "georgemwaura058@gmail.com",
             "telephone": "+254738026731",
-            "areaServed": { "@type": "Country", "name": "Kenya" },
+            "areaServed": [
+              { "@type": "City", "name": "Karatina" },
+              { "@type": "Country", "name": "Kenya" }
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://getozvea.org/#george-mwaura",
+            "name": "George Mwaura Mungai",
+            "worksFor": { "@id": "https://getozvea.org/#organization" },
             "sameAs": [
               "https://github.com/jojez558",
               "https://x.com/jojez__mungai",
@@ -57,7 +66,34 @@
             "image": "https://getozvea.org/images/getozvea-logo.svg",
             "description": "Website building, web development, e-commerce, SEO, digital marketing, branding, copywriting, and video editing in Kenya.",
             "areaServed": { "@type": "Country", "name": "Kenya" },
+            "provider": { "@id": "https://getozvea.org/#organization" },
             "serviceType": ["Web design", "Website development", "E-commerce development", "Digital marketing", "Search engine optimization", "Branding", "Copywriting", "Video editing"]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://getozvea.org/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Can a website redesign boost your traffic?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. A fresh, modern design can enhance user experience, making your site easier to navigate. That can lead to increased traffic, stronger engagement, and more enquiries." }
+              },
+              {
+                "@type": "Question",
+                "name": "My website isn't bringing in enough leads.",
+                "acceptedAnswer": { "@type": "Answer", "text": "We can review your message, structure, calls to action, speed, and search visibility to identify what is blocking conversions." }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I enhance my website's SEO?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Start with a clear technical foundation, useful content, strong page structure, and ongoing measurement. Our SEO service brings these pieces together." }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the most impactful digital marketing channels?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The right mix depends on your audience and goals. We typically combine search, social, content, and paid campaigns around measurable outcomes." }
+              }
+            ]
           }
         ]
       }
@@ -68,7 +104,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=20260910" />
+    <link rel="stylesheet" href="css/styles.css?v=20260927-mobile-footer-v2" />
   </head>
   <body>
     <section class="landing-page" aria-labelledby="landing-title">
@@ -85,8 +121,8 @@
       </video>
       <div class="landing-overlay" aria-hidden="true"></div>
       <div class="landing-grain" aria-hidden="true"></div>
+      <div class="landing-brand">G<span>e</span>tozvea</div>
       <div class="landing-content">
-        <div class="landing-brand">G<span>e</span>tozvea</div>
         <p class="landing-kicker">
           <span></span>A digital space by George Mwaura
         </p>
@@ -378,10 +414,10 @@
               </p>
             </article>
           </div>
-          <div class="agency-logos">
-            <span>GLOBAL TRADE</span><span>SAVANNAH LODGE</span
-            ><span>BUSINESS CENTER</span><span>WILDVIEW</span
-            ><span>HOTEL SUITES</span><span>RADIO 254</span>
+          <div class="agency-logos" aria-label="Business types served">
+            <span>SMALL BUSINESSES</span><span>STARTUPS</span
+            ><span>ORGANIZATIONS</span><span>CREATIVE TEAMS</span
+            ><span>PROFESSIONALS</span><span>HOSPITALITY</span>
           </div>
           <div class="agency-section-head">
             <div>
@@ -439,15 +475,15 @@
             Top-notch digital work<br /><em>with a human approach.</em>
           </h1>
           <p class="agency-lede">
-            Getozvea is a web design and digital marketing company founded by
-            George Mwaura Mungai in Karatina, Kenya. We partner with businesses
-            to understand their goals and deliver useful, distinctive digital
-            experiences.
+            Getozvea is a web design and digital marketing studio founded by
+            George Mwaura Mungai and based in Karatina, Kenya. We build
+            responsive websites, e-commerce experiences, and digital services
+            for businesses, organizations, and individuals in Kenya.
           </p>
           <div class="agency-profile-strip">
-            <div><span>Portfolio author</span><strong>George Mwaura Mungai</strong></div>
-            <div><span>Education</span><strong>Third-year student · Karatina University</strong></div>
-            <div><span>From</span><strong>Wamuini village, Kitale</strong></div>
+            <div><span>Business</span><strong>Getozvea</strong></div>
+            <div><span>Industry</span><strong>Web design &amp; digital services</strong></div>
+            <div><span>Serving</span><strong>Karatina · Kenya · Remote</strong></div>
           </div>
           <div class="agency-split agency-profile-intro">
             <div class="profile-portrait-wrap">
@@ -738,41 +774,26 @@
           </div>
           <div class="agency-section-head">
             <div>
-              <span class="agency-eyebrow">Client testimonials</span>
-              <h2>What our valued clients say.</h2>
+              <span class="agency-eyebrow">How we work</span>
+              <h2>Clear thinking from first conversation to launch.</h2>
             </div>
-            <div class="agency-rating">
-              <strong>EXCELLENT</strong> 4.5 ★
-              <small>Based on 60 reviews</small>
-            </div>
+            <p>Every engagement starts with your goals and scope. The plan, deliverables, and timeline are agreed directly before work begins.</p>
           </div>
           <div class="agency-card-grid agency-card-grid-3">
-            <article class="agency-review">
-              <b>★★★★★</b>
-              <h3>Professional and detail-oriented</h3>
-              <p>
-                “The team understood what we needed and transformed the idea
-                into a website we are proud to share.”
-              </p>
-              <small>Verified client review</small>
+            <article class="agency-card">
+              <span class="agency-icon">01</span>
+              <h3>Discover</h3>
+              <p>Clarify the audience, project goals, content, requirements, and practical constraints.</p>
             </article>
-            <article class="agency-review">
-              <b>★★★★★</b>
-              <h3>Made our brand clearer</h3>
-              <p>
-                “The process was friendly, practical, and focused on helping our
-                business communicate better online.”
-              </p>
-              <small>Mercy Musembi · 11 months ago</small>
+            <article class="agency-card">
+              <span class="agency-icon">02</span>
+              <h3>Design and build</h3>
+              <p>Create the visual direction and implement the agreed website or digital service.</p>
             </article>
-            <article class="agency-review">
-              <b>★★★★★</b>
-              <h3>A strong digital partner</h3>
-              <p>
-                “Getozvea brought care and structure to the project from the
-                first conversation to launch.”
-              </p>
-              <small>Peter Musembi · 12 months ago</small>
+            <article class="agency-card">
+              <span class="agency-icon">03</span>
+              <h3>Review and launch</h3>
+              <p>Test the work, refine details with your feedback, and prepare it for launch.</p>
             </article>
           </div>
         </section>
@@ -1117,7 +1138,7 @@
           </nav>
           <article class="report-document">
             <section id="report-abstract" class="report-section report-highlight"><span class="agency-eyebrow">Abstract</span><p>Getozvea is a full-stack website and content management system built for a web design and digital studio. It responds to a practical problem faced by small businesses: needing a site that looks professional and performs well, while still being easy for the owner to update without depending on a developer for every small change.</p><p>The result combines a public marketing website with a secure, purpose-built admin panel. An administrator can edit text, manage services and portfolio entries, upload images, update contact information, and review contact form messages. This report explains the reasoning behind the system rather than reproducing its source code.</p></section>
-            <section id="report-introduction" class="report-section"><span class="agency-eyebrow">Chapter 1</span><h2>Introduction</h2><p>A studio's own website is both a marketing tool and a proof of its capability. A slow, dated, or difficult-to-update website can undermine trust before a conversation begins. Getozvea was conceived as a site that communicates quality while giving its owner control over everyday content changes.</p><div class="report-two-col"><div><h3>Aim</h3><p>Design, build, and document a complete website and content management solution for a fictional web design studio.</p></div><div><h3>Objectives</h3><p>Create a distinctive public site, a working backend, authenticated administration, image uploads, contact handling, and a tested result.</p></div><div><h3>Scope</h3><p>One site with home, services, portfolio, about, contact, and supporting admin tools. No multi-tenant platform, payments, visitor accounts, or advanced analytics.</p></div><div><h3>Significance</h3><p>Demonstrates end-to-end ability: translating a business problem into requirements, architecture, implementation, testing, evaluation, and documentation.</p></div></div></section>
+            <section id="report-introduction" class="report-section"><span class="agency-eyebrow">Chapter 1</span><h2>Introduction</h2><p>A studio's own website is both a marketing tool and a proof of its capability. A slow, dated, or difficult-to-update website can undermine trust before a conversation begins. Getozvea is presented as a real web design and digital studio in Karatina, Kenya; this report documents the website and content-management project developed for the brand.</p><div class="report-two-col"><div><h3>Aim</h3><p>Design, build, and document a complete website and content management solution for Getozvea.</p></div><div><h3>Objectives</h3><p>Create a distinctive public site, a working backend, authenticated administration, image uploads, contact handling, and a tested result.</p></div><div><h3>Scope</h3><p>One site with home, services, portfolio, about, contact, and supporting admin tools. No multi-tenant platform, payments, visitor accounts, or advanced analytics.</p></div><div><h3>Significance</h3><p>Demonstrates end-to-end ability: translating a business problem into requirements, architecture, implementation, testing, evaluation, and documentation.</p></div></div></section>
             <section id="report-research" class="report-section"><span class="agency-eyebrow">Chapter 2</span><h2>Literature review and background research</h2><p>Websites are important trust and decision-making touchpoints for small service businesses. A content management system separates editable content from presentation, allowing a non-technical owner to update a site without editing code.</p><p>General platforms such as WordPress provide breadth and a large ecosystem, but also introduce plugin maintenance, database configuration, and a wider security burden. Headless services offer flexibility but create external dependencies and possible subscription costs. Static sites are fast and simple, but often require a rebuild for each change.</p><p>For a single site with a small, stable set of content types, a bespoke backend and focused admin interface offered the best fit: control over the experience, no third-party subscription, and only the features the owner actually needs.</p></section>
             <section id="report-method" class="report-section"><span class="agency-eyebrow">Chapter 3</span><h2>Research methodology and workflow</h2><p>Development followed an iterative, incremental approach. The public visual design was established first, then the backend, dynamic content, and admin panel were built around a concrete layout rather than abstract assumptions.</p><div class="report-steps"><div><b>01</b><strong>Define</strong><span>Problem, audience, scope, and requirements.</span></div><div><b>02</b><strong>Design</strong><span>Architecture, interface, content structure, and flows.</span></div><div><b>03</b><strong>Build</strong><span>Implement in small, verifiable slices.</span></div><div><b>04</b><strong>Test</strong><span>Check features, integrations, usability, and security.</span></div><div><b>05</b><strong>Document</strong><span>Record decisions, limitations, and future work.</span></div></div></section>
             <section id="report-requirements" class="report-section"><span class="agency-eyebrow">Chapter 4</span><h2>Requirements analysis</h2><div class="report-requirement-grid"><div><h3>Public visitor</h3><p>Browse the studio, review services and work, understand the offer, and submit an enquiry through a clear contact form.</p></div><div><h3>Business owner</h3><p>Log in securely, edit text, manage services and portfolio items, upload images, update contact details, and review messages.</p></div><div><h3>Maintainer</h3><p>Work with clear modules and simple storage so future structural changes remain understandable and affordable to deploy.</p></div><div><h3>Quality requirements</h3><p>Usable without coding knowledge, reasonably secure, responsive, maintainable, fast enough for ordinary connections, and deployable on modest hosting.</p></div></div></section>
@@ -1730,9 +1751,9 @@
           <div class="kicker"><span class="dot"></span>Contact</div>
           <h1 class="page-title">Let's talk</h1>
           <p class="lede">
-            Open to web development work, conversations about MwauraTM, or
-            anyone building something from very little who wants to compare
-            notes.
+            Contact Getozvea, a web design and digital marketing studio based
+            in Karatina, Kenya, about website design, web development,
+            e-commerce, SEO, branding, and digital projects.
           </p>
 
           <ul class="contact-list">
@@ -1752,7 +1773,9 @@
             </li>
             <li>
               <span class="c-label">Telegram</span
-              ><span class="c-value">WhatsApp available</span>
+              ><a class="c-value" href="https://t.me/DevMwaura" target="_blank" rel="noopener"
+                >t.me/DevMwaura</a
+              >
             </li>
           </ul>
 
@@ -1795,37 +1818,13 @@
         <div class="agency-footer-columns">
           <div>
             <span>Location</span><strong>Karatina, Kenya</strong
-            ><strong>Getozvea office address</strong>
+            ><strong>Serving clients in Kenya and remotely</strong>
           </div>
           <div>
             <span>Contact</span
             ><a href="tel:+254738026731">+254 738 026 731</a
             ><a href="https://wa.me/254738026731" target="_blank" rel="noopener"
               >WhatsApp anytime</a
-            >
-          </div>
-          <div>
-            <span>Quick links</span
-            ><button data-tab-link="agency-home">Home</button
-            ><button data-tab-link="agency-services">Services</button
-            ><button data-tab-link="agency-contact">Contact Us</button>
-          </div>
-          <div>
-            <span>Follow</span
-            ><a href="https://github.com/jojez558" target="_blank" rel="noopener"
-              >GitHub</a
-            ><a href="https://x.com/jojez__mungai" target="_blank" rel="noopener"
-              >X / Twitter</a
-            ><a href="https://www.instagram.com/_m.w.a.u.r.a_9?stkn=d2h2cXZidnRldnc=" target="_blank" rel="noopener"
-              >Instagram</a
-            ><a href="https://www.tiktok.com/@_m.w.a.u.r.a_9" target="_blank" rel="noopener"
-              >TikTok</a
-            ><a href="https://www.linkedin.com/in/george-mungai-a6b05a372?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener"
-              >LinkedIn</a
-            ><a href="https://t.me/DevMwaura" target="_blank" rel="noopener"
-              >Telegram</a
-            ><a href="https://wa.me/254738026731" target="_blank" rel="noopener"
-              >WhatsApp</a
             >
           </div>
         </div>
@@ -1838,9 +1837,7 @@
     </div>
 
     <aside class="chatbot" aria-label="Getozvea assistant">
-      <button class="chatbot-toggle" type="button" aria-expanded="false" aria-controls="chatbot-panel">
-        <span class="chatbot-toggle-mark" aria-hidden="true">G</span>
-        <span>Ask Getozvea</span>
+      <button class="chatbot-toggle" type="button" aria-label="Open Getozvea assistant" aria-expanded="false" aria-controls="chatbot-panel" title="Drag to move the assistant">
         <span class="chatbot-toggle-dot" aria-hidden="true"></span>
       </button>
       <section class="chatbot-panel" id="chatbot-panel" hidden>
@@ -1999,6 +1996,6 @@
       </a>
     </div>
 
-    <script src="js/main.js?v=20260920-website-knowledge"></script>
+    <script src="js/main.js?v=20260927-draggable-assistant"></script>
   </body>
 </html>

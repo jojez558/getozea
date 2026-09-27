@@ -28,6 +28,7 @@ const chatbotPrompts = document.querySelectorAll("[data-chat-prompt]");
 const chatbotTrainToggle = document.querySelector(".chatbot-train-toggle");
 const chatbotTraining = document.querySelector("#chatbot-training");
 const trainingStatus = document.querySelector(".chatbot-training-status");
+const CHATBOT_POSITION_KEY = "getozea-chatbot-position";
 
 const TRAINING_KEY = "getozvea-chatbot-knowledge";
 
@@ -485,8 +486,96 @@ function openChatbot() {
   chatbotPanel.hidden = false;
   chatbot.classList.add("is-open");
   chatbotToggle.setAttribute("aria-expanded", "true");
+  requestAnimationFrame(positionChatbotPanel);
   chatbotInput?.focus();
 }
+
+function clampChatbotPosition(left, top) {
+  if (!chatbot) return;
+  const bounds = chatbot.getBoundingClientRect();
+  const safeLeft = Math.max(8, Math.min(left, window.innerWidth - bounds.width - 8));
+  const safeTop = Math.max(8, Math.min(top, window.innerHeight - bounds.height - 8));
+  chatbot.style.left = `${safeLeft}px`;
+  chatbot.style.top = `${safeTop}px`;
+  chatbot.style.right = "auto";
+  chatbot.style.bottom = "auto";
+  chatbot.style.transform = "none";
+}
+
+function positionChatbotPanel() {
+  if (!chatbotPanel || chatbotPanel.hidden || !chatbotToggle) return;
+  const trigger = chatbotToggle.getBoundingClientRect();
+  chatbotPanel.style.position = "fixed";
+  chatbotPanel.style.right = "auto";
+  chatbotPanel.style.bottom = "auto";
+  chatbotPanel.style.left = "0px";
+  chatbotPanel.style.top = "0px";
+
+  const panel = chatbotPanel.getBoundingClientRect();
+  const left = Math.max(12, Math.min(trigger.right - panel.width, window.innerWidth - panel.width - 12));
+  const above = trigger.top - panel.height - 12;
+  const top = above >= 12
+    ? above
+    : Math.min(trigger.bottom + 12, window.innerHeight - panel.height - 12);
+  chatbotPanel.style.left = `${left}px`;
+  chatbotPanel.style.top = `${Math.max(12, top)}px`;
+}
+
+try {
+  const savedPosition = JSON.parse(localStorage.getItem(CHATBOT_POSITION_KEY) || "null");
+  if (savedPosition && Number.isFinite(savedPosition.left) && Number.isFinite(savedPosition.top)) {
+    requestAnimationFrame(() => clampChatbotPosition(savedPosition.left, savedPosition.top));
+  }
+} catch {}
+
+let chatbotDrag = null;
+let suppressChatbotClick = false;
+
+chatbotToggle?.addEventListener("pointerdown", (event) => {
+  if (!chatbotPanel?.hidden || (event.pointerType === "mouse" && event.button !== 0)) return;
+  const bounds = chatbot.getBoundingClientRect();
+  chatbotDrag = {
+    pointerId: event.pointerId,
+    startX: event.clientX,
+    startY: event.clientY,
+    left: bounds.left,
+    top: bounds.top,
+    moved: false,
+  };
+  chatbotToggle.setPointerCapture(event.pointerId);
+});
+
+chatbotToggle?.addEventListener("pointermove", (event) => {
+  if (!chatbotDrag || event.pointerId !== chatbotDrag.pointerId) return;
+  const deltaX = event.clientX - chatbotDrag.startX;
+  const deltaY = event.clientY - chatbotDrag.startY;
+  if (!chatbotDrag.moved && Math.hypot(deltaX, deltaY) < 7) return;
+  chatbotDrag.moved = true;
+  event.preventDefault();
+  chatbot.classList.add("is-dragging");
+  clampChatbotPosition(chatbotDrag.left + deltaX, chatbotDrag.top + deltaY);
+});
+
+function finishChatbotDrag(event) {
+  if (!chatbotDrag || event.pointerId !== chatbotDrag.pointerId) return;
+  if (chatbotDrag.moved) {
+    const bounds = chatbot.getBoundingClientRect();
+    localStorage.setItem(CHATBOT_POSITION_KEY, JSON.stringify({ left: bounds.left, top: bounds.top }));
+    suppressChatbotClick = true;
+  }
+  chatbot.classList.remove("is-dragging");
+  chatbotDrag = null;
+}
+
+chatbotToggle?.addEventListener("pointerup", finishChatbotDrag);
+chatbotToggle?.addEventListener("pointercancel", finishChatbotDrag);
+window.addEventListener("resize", () => {
+  if (chatbot?.style.left) {
+    const bounds = chatbot.getBoundingClientRect();
+    clampChatbotPosition(bounds.left, bounds.top);
+  }
+  positionChatbotPanel();
+});
 
 function closeChatbot() {
   if (!chatbotPanel || !chatbotToggle) return;
@@ -496,6 +585,10 @@ function closeChatbot() {
 }
 
 chatbotToggle?.addEventListener("click", () => {
+  if (suppressChatbotClick) {
+    suppressChatbotClick = false;
+    return;
+  }
   chatbotPanel?.hidden ? openChatbot() : closeChatbot();
 });
 chatbotClose?.addEventListener("click", closeChatbot);
